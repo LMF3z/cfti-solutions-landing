@@ -1,4 +1,10 @@
-
+/**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /**
  * WHAT IS THIS FILE?
@@ -7,6 +13,15 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
+
+ :root {
+  --bg-primary: #e2eaf5;
+  --color-primary: #1c1e1f;
+  --bg-violet: #5731b1;
+  --header-gradient: linear-gradient(to bottom, #e4edf4, #fbfcfc);
+  --gradient-show-concept: linear-gradient(to bottom left, #c3e59d, #68b7f0);
+ }
+
 html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
@@ -15,9 +30,37 @@ html {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
 }
 
 body {
   padding: 0;
   line-height: inherit;
+}
+
+@layer base {
+  h1 {
+    @apply font-bold text-4xl;
+  }
+
+  img {
+    @apply h-full w-full object-cover rounded-lg;
+  }
+}
+
+.button {
+  @apply mb-2 border border-bg-violet hover:bg-bg-violet hover:text-white;
+}
+
+.header-gradient {
+  background: var(--header-gradient);
+}
+
+.gradient-show-concept {
+  background: var(--gradient-show-concept);
+}
+
+.grid-reversed {
+  direction: rtl;
 }

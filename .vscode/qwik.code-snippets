@@ -74,5 +74,19 @@
       "});",
       ""
     ]
-  }
+  },
+  "react qwik component": {
+		"prefix": "react-qc",
+		"body": [
+			"/** @jsxImportSource react */",
+			"import { qwikify$ } from '@builder.io/qwik-react';",
+      "",
+			"const ${1:ComponentName} = () => {",
+  				"return <>${1:ComponentName}</>;",
+			"};",
+      "",
+			"export const Q${1:ComponentName} = qwikify$(${1:ComponentName});"
+		],
+		"description": "Create a new react qwik component"
+	}
 }
